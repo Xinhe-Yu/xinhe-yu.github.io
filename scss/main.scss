@@ -1,0 +1,85 @@
+//m-1:m-16, p-1:p-16, 4px:768px
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer * .75,
+  4: $spacer,
+  5: $spacer * 1.5,
+  6: $spacer * 2,
+  7: $spacer * 3,
+  8: $spacer * 4,
+  9: $spacer * 6,
+  10: $spacer * 8,
+  11: $spacer * 12,
+  12: $spacer * 16,
+  13: $spacer * 24,
+  14: $spacer * 32,
+  15: $spacer * 40,
+  16: $spacer * 48,
+);
+
+//fs-1:fs-8, 48px:12px
+$font-size-base:              1rem;
+$h1-font-size:                $font-size-base * 3;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.5;
+$h4-font-size:                $font-size-base * 1.25;
+$h5-font-size:                $font-size-base * 1.125;
+$h6-font-size:                $font-size-base;
+$h7-font-size:                $font-size-base * 0.875;
+$h8-font-size:                $font-size-base * 0.75;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size,
+);
+//colors
+$teal-300   : #80cbc4;
+$yellow-300 : #fff59d;
+$success    : $teal-300;
+
+//gradient
+$enable-gradients:            true;
+$gradient: linear-gradient(to right, rgba($yellow-300, 0.95), rgba($success, 0.95));
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+    .container.box{
+        margin-top: 70px;
+        z-index: -2;
+        max-width:768px;
+        margin-right:auto;
+        margin-left:auto;
+    }
+
+    .container:not(.navbarContainer){
+        padding-top: 68px;
+        margin-bottom: -68px;
+    }
+
+    .list-group-flush li:first-child { border-top: none; }
+
+$profileMaskUrl : url("data:image/svg+xml,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><path d='M70.2,-22.1C79.4,5.5,67.3,40.8,44.4,56.3C21.4,71.8,-12.3,67.6,-35.3,50.4C-58.4,33.3,-70.7,3.1,-63.1,-22.3C-55.4,-47.8,-27.7,-68.6,1.4,-69.1C30.5,-69.5,61,-49.6,70.2,-22.1Z' transform='translate(100 100)'/></svg>");
+
+    .profileMask{
+        -webkit-mask-image: $profileMaskUrl;
+        mask-image: $profileMaskUrl;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+    }
+
+    .d-md-flex.fs-5{
+        max-width: 992px;
+        margin-right:auto;
+        margin-left:auto;
+    }
