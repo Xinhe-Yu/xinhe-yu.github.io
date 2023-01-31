@@ -14882,6 +14882,12 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container:not(.navbarContainer) {
   padding-top: 60px;
   margin-bottom: -60px;
@@ -14914,6 +14920,11 @@ a.text-se {
 }
 a.text-se:hover {
   color: rgba(197, 225, 165, 0.75);
+}
+
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .svg-enter:after {

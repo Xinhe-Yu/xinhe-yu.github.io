@@ -59,6 +59,11 @@ $list-group-border-color:           rgba(white, .125);
 
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
 
     .container:not(.navbarContainer){
         padding-top: 60px;
@@ -94,6 +99,11 @@ a.text-se{
     }
 }
 
+.row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
 .svg-enter:after {
     display: inline-flex;
     content: "";
