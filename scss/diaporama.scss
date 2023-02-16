@@ -1,4 +1,4 @@
-@media (max-width:1199px) {
+@media screen and (max-width:1199px) {
     img {
         max-height: 66vh;
 
@@ -9,7 +9,43 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width:1200px),
+screen and (max-height: 739px) {
+
+    li,
+    p,
+    dl,
+    dd,
+    div,
+    th,
+    span {
+        font-size: 20px;
+    }
+
+    p span.small {
+        font-size: 18px
+    }
+}
+
+@media screen and (min-width: 1200px),
+screen and (min-height: 740px) {
+
+    li,
+    p,
+    dl,
+    dd,
+    div,
+    th,
+    span {
+        font-size: 28px;
+    }
+
+    p span.small {
+        font-size: 20px
+    }
+}
+
+@media screen and (min-width: 1200px) {
     .scrollContainer {
         height: 100vh;
         overflow-y: scroll;
@@ -33,20 +69,6 @@
 
     .pageEven {
         padding: 48px;
-    }
-
-    li,
-    p,
-    dl,
-    dd,
-    div,
-    th,
-    span {
-        font-size: 28px;
-    }
-
-    p span.small {
-        font-size: 20px
     }
 
     img.tier {
