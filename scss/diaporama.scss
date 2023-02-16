@@ -7,6 +7,10 @@
     section {
         padding: 16px;
     }
+
+    img.width-limit {
+        max-width: 70vw;
+    }
 }
 
 @media screen and (min-width:1200px) and (max-height: 739px) {
