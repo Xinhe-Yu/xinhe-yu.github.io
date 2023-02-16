@@ -1,0 +1,106 @@
+@media (max-width: 1199px) {
+  img {
+    max-height: 66vh;
+  }
+  section {
+    padding: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .scrollContainer {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+  section {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+  }
+  section.title {
+    display: flex;
+  }
+  .pageOdd {
+    padding: 48px;
+  }
+  .pageEven {
+    padding: 48px;
+  }
+  li,
+  p,
+  dl,
+  dd,
+  div,
+  th,
+  span {
+    font-size: 28px;
+  }
+  p span.small {
+    font-size: 20px;
+  }
+  img.tier {
+    height: 40vh;
+  }
+  img.demi {
+    max-height: 50vh;
+  }
+  img.solo {
+    max-height: 75vh;
+  }
+  img.gr-demi {
+    max-height: 75vh;
+    max-width: 45vw;
+  }
+}
+p.reference {
+  font-size: 20px;
+}
+
+img {
+  margin: 4px;
+  max-width: 80vw;
+}
+
+.pageOdd {
+  background-color: #FFE0B2;
+}
+
+.pageEven {
+  background-color: #EEEEEE;
+}
+
+span.strong {
+  color: #6D4C41;
+  font-weight: bold;
+}
+
+.authorAndYear {
+  color: #BF360C;
+}
+
+.title {
+  font-style: italic;
+}
+
+.AddressAndEditor {
+  color: #8D6E63;
+}
+
+.booktitle {
+  color: #8D6E63;
+  font-style: italic;
+}
+
+ul {
+  list-style: square inside;
+}
+
+.svg-arrow:after {
+  display: inline-flex;
+  content: "";
+  background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23004D40" class="bi bi-pencil-square" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/></svg>');
+  background-size: 16px 16px;
+  height: 16px;
+  width: 16px;
+}/*# sourceMappingURL=diaporama.css.map */
