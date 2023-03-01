@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,800;1,400;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+$profileMaskUrl : url("data:image/svg+xml,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><path d='M70.2,-22.1C79.4,5.5,67.3,40.8,44.4,56.3C21.4,71.8,-12.3,67.6,-35.3,50.4C-58.4,33.3,-70.7,3.1,-63.1,-22.3C-55.4,-47.8,-27.7,-68.6,1.4,-69.1C30.5,-69.5,61,-49.6,70.2,-22.1Z' transform='translate(100 100)'/></svg>");
+
+.profileMask {
+    -webkit-mask-image: $profileMaskUrl;
+    mask-image: $profileMaskUrl;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    padding: 1rem;
+    max-width: 384px;
+    width: 80vw;
+    z-index: 0;
+}
+
+.profileContainer {
+    position: relative;
+    max-width: 384px
+}
+
+.overlayStroke {
+    position: absolute;
+    top: -20px;
+    bottom: 8px;
+    left: -20px;
+    right: 12px;
+    z-index: 1;
+}
+
+.landingGrid {
+    display: grid;
+    background-color: #1fe0;
+}
+
+#introList {
+    background-color: #98bddc;
+    box-shadow: 8px 8px black;
+}
+
+#introList h1,
+a {
+    padding: 0 8px 0;
+}
+
+#introList h1 {
+    padding-top: 8px;
+}
+
+#introList a:last-child {
+    padding-bottom: 8px;
+}
+
+
+
+@media screen and (min-width:992px) {
+    #navbar {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .landingGrid {
+        grid-template-columns: 1fr 96px 1fr;
+    }
+
+    #introList {
+        grid-column-start: 3;
+    }
+}
