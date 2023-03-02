@@ -51,12 +51,10 @@ const LandingSection = () => {
 
   return (
     <FullScreenSection
+      adddashedborder={{ bottom: "true" }}
       justifyContent="center"
       alignItems="center"
-      /*       style={{ backgroundImage: `url(${bgImg})`, backgroundSize: "cover" }} */
       backgroundImage={bgImg}
-    /*       backgroundColor="background :  #FDBB2D; 
-              background: linear-gradient(90deg, #FDBB2D 0%, #daae51 100%);" */
     >
       <Box className="landingGrid"
         justifyContent="start"
@@ -71,12 +69,12 @@ const LandingSection = () => {
             <path d="M70.2,-22.1C79.4,5.5,67.3,40.8,44.4,56.3C21.4,71.8,-12.3,67.6,-35.3,50.4C-58.4,33.3,-70.7,3.1,-63.1,-22.3C-55.4,-47.8,-27.7,-68.6,1.4,-69.1C30.5,-69.5,61,-49.6,70.2,-22.1Z"
               fill="transparent"
               stroke="black"
-              stroke-width="6"
+              strokeWidth="6"
               transform='translate(100 100)' />
           </svg>
-          <Image src={profile} className="profileMask" />
+          <Image src={profile} />
         </div>
-        <VStack align="strech" id="introList">
+        <VStack align="strech">
           <Heading as="h1">{greeting}</Heading>
           <Heading as="h2" size="md" px={8}>{bio}</Heading>
           {introListItems}

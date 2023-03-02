@@ -1,27 +1,87 @@
 import FullScreenSection from "./layout/FullScreenSection";
-import { Heading, HStack, Box } from "@chakra-ui/react";
+import { Heading, Box } from "@chakra-ui/react";
+import bgImg from "../assets/img/low-poly-grid-haikei.svg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import PublicationModal from "./PublicationModal";
+
+const heading = ["parcours", "académique"]
+const education = [
+  {
+    id: "phd",
+    time: "Depuis 2019",
+    diploma: "Doctorante en Histoire de l'Art",
+    school: "École pratique des hautes études",
+    location: "Paris, France",
+  },
+  {
+    id: "german",
+    time: "2020",
+    diploma: "Stage d'allemand",
+    school: "Université de Vienne",
+    location: "Vienne, Autriche",
+  },
+  {
+    id: "master",
+    time: "2017-2019",
+    diploma: "Master en Mondes Anciens",
+    school: "École normale supérieure de Paris",
+    location: "Paris, France",
+  },
+  {
+    id: "bachelor",
+    time: "2013-2017",
+    diploma: "Bachelor en Histoire",
+    school: "Université Fudan",
+    location: "Shanghaï, Chine",
+  },
+]
+
+const intro = "La culture grecque est à la fois la passion de mon enfance et le domaine de mes recherches d'aujourd'hui. En l'occurrence, je prépare une thèse à l'École pratique des hautes études (Paris) au sujet des vases athéniens des VIe et Ve siècles av. J.-C.";
+
 const ResearchSection = () => {
+  const EduListItems = education.map(item => {
+    return (
+      <li key={item.id}>
+        <p><span>{item.time}</span> {item.diploma}</p>
+        <p>{item.school}</p>
+        <p>
+          <FontAwesomeIcon icon={faLocationDot} /> {item.location}
+        </p>
+      </li>
+    )
+  })
   return (
     <FullScreenSection
+      adddashedborder={{ bottom: "true", top: "true" }}
+      backgroundImage={bgImg}
       justifyContent="center"
       alignItems="center"
-      backgroundColor="background: #d53369;
-      background: linear-gradient(90deg, #d53369 0%, #dd5b87 100%);"
-      isDarkBackground
       id="research-section">
       <Box
-        justifyContent="start"
         alignItems="center"
         fontSize="md"
+        className="researchGrid"
       >
-        <HStack>
-          <Heading as="h1" style={{ writingMode: "vertical-rl" }}>
-            ACADÉMIQUE
-          </Heading>
-          <Heading as="h1" style={{ writingMode: "vertical-rl" }}>
-            PARCOURS
-          </Heading>
-        </HStack>
+        <div>
+          <Heading as="h1" size="2xl">{heading[0]}</Heading>
+          <Heading as="h1" size="2xl">{heading[1]}</Heading>
+        </div>
+        <div>
+          <p>{intro}</p>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <ul>
+            {EduListItems}
+          </ul>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <PublicationModal />
+        </div>
       </Box>
     </FullScreenSection>
   )

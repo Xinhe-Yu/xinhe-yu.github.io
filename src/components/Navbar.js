@@ -47,7 +47,7 @@ const Navbar = () => {
 			transitionDuration=".3s"
 			transitionTimingFunction="ease-in-out"
 			backgroundColor="#18181b"
-			zIndex={1}
+			zIndex={255}
 			width="100vw"
 		>
 			<Box color="#FAFAFA" maxWidth="1280px" margin="0 auto" fontSize='xl'>
@@ -58,7 +58,9 @@ const Navbar = () => {
 					alignItems="center"
 					id="navbar"
 				>
-					<Heading as="h3" size='lg'>Xinhe YU</Heading>
+					<nav>
+						<Heading as="h3" size='lg'>Xinhe YU</Heading>
+					</nav>
 					<nav>
 						{contactListItems}
 					</nav>

@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 import LandingSection from './components/LandingSection';
 import ResearchSection from './components/ResearchSection';
 import LanguageSection from './components/LanguageSection';
-import CodingSection from './components/CodingSection'
+/* import CodingSection from './components/CodingSection' */
 function App() {
   return (
     <ChakraProvider theme={chakraTheme}>
@@ -15,7 +15,7 @@ function App() {
         <LandingSection />
         <ResearchSection />
         <LanguageSection />
-        <CodingSection />
+        {/*     <CodingSection /> */}
       </main>
     </ChakraProvider>
   );
