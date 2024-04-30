@@ -95,10 +95,10 @@ $dashedLine2 : 0.75rem dashed #33bad5;
     z-index: 1;
 }
 
-.codingGrid > div:nth-of-type(n+1) {
-    box-shadow: 0 15px 25px rgba(142, 136, 136, 0.2);
-    backdrop-filter: blur(1px);
-    background-color: rgba(179, 189, 202, 0.2);
+.codingGrid > div:nth-of-type(n+2) {
+    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.1), 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    background-color: rgba(179, 189, 202, 0.1);
     font-family: "Ubuntu";
     font-size: 1rem;
     font-weight: 100;
@@ -110,13 +110,13 @@ $dashedLine2 : 0.75rem dashed #33bad5;
     color: #f8fcff;
 }
 
-.codingGrid > div:nth-of-type(n+1) li div {
+.codingGrid > div:nth-of-type(n+2) li div {
     display: flex;
     justify-content: center;
 
 }
 
-.codingGrid div:nth-of-type(n+1) li div a {
+.codingGrid div:nth-of-type(n+2) li div a {
     margin-left: 0.5rem;
     color: #ebd676;
 }
