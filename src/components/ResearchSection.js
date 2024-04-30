@@ -9,8 +9,8 @@ const heading = ["parcours", "académique"]
 const education = [
   {
     id: "phd",
-    time: "Depuis 2019",
-    diploma: "Doctorante en Histoire de l'Art",
+    time: "2019-2024",
+    diploma: "Doctorat en Histoire de l'Art",
     school: "École pratique des hautes études",
     location: "Paris, France",
   },
@@ -37,7 +37,7 @@ const education = [
   },
 ]
 
-const intro = "La culture grecque est à la fois la passion de mon enfance et le domaine de mes recherches d'aujourd'hui. En l'occurrence, je prépare une thèse à l'École pratique des hautes études (Paris) au sujet des vases athéniens des VIe et Ve siècles av. J.-C.";
+const intro = "La culture grecque, qui a animé ma jeunesse, reste un intérêt précieux dans ma vie, même si elle n'occupe plus le centre de mes activités professionnelles. J'ai soutenu ma thèse le 27 avril 2024, qui explorait les vases athéniens des VIe et Ve siècles av. J.-C.";
 
 const ResearchSection = () => {
   const EduListItems = education.map(item => {
@@ -61,7 +61,7 @@ const ResearchSection = () => {
       <Box
         alignItems="center"
         fontSize="md"
-        className="researchGrid"
+        className="universalGrid researchGrid"
       >
         <div>
           <Heading as="h1" size="2xl">{heading[0]}</Heading>

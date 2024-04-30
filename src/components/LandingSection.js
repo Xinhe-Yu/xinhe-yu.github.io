@@ -8,20 +8,21 @@ const greeting = "Salut, c'est Xinhe !"
 const bio = "Je suis ..."
 const intro = [
   {
+    id: "coding",
+    icon: faCode,
+    description: "Développeuse Front-end",
+  },
+  {
     id: "research",
     icon: faGraduationCap,
-    description: "Doctorante en histoire de l'art",
+    description: "Docteure en histoire de l'art",
   },
   {
     id: "language",
     icon: faLanguage,
     description: "Traductrice chinois-français",
   },
-  {
-    id: "coding",
-    icon: faCode,
-    description: "Développeuse Front-end",
-  }
+
 
 ]
 

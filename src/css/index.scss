@@ -57,17 +57,14 @@ $profileMaskUrl : url("data:image/svg+xml,<svg viewBox='0 0 200 200' xmlns='http
 }
 
 /* Research Section */
-.researchGrid {
+.universalGrid {
     display: grid;
 }
 
-.researchGrid h1 {
-    color: #FAFAFA;
-    text-shadow: 0.15rem 0.15rem #33d59f;
-}
+
 
 /* 2 card-like box */
-.researchGrid > div {
+.universalGrid > div {
     text-align: center;
     position: relative;
     margin: 2rem;
@@ -77,7 +74,7 @@ $profileMaskUrl : url("data:image/svg+xml,<svg viewBox='0 0 200 200' xmlns='http
 $dashedLine1 : 1rem dashed #33bad5;
 $dashedLine2 : 0.75rem dashed #33bad5;
 
-.researchGrid > div:nth-of-type(2) > div {
+.universalGrid > div:nth-of-type(2) > div {
     position: absolute;
     top: -1.25rem;
     left: -1rem;
@@ -98,11 +95,54 @@ $dashedLine2 : 0.75rem dashed #33bad5;
     z-index: 1;
 }
 
+.codingGrid > div:nth-of-type(n+1) {
+    box-shadow: 0 15px 25px rgba(142, 136, 136, 0.2);
+    backdrop-filter: blur(1px);
+    background-color: rgba(179, 189, 202, 0.2);
+    font-family: "Ubuntu";
+    font-size: 1rem;
+    font-weight: 100;
+    border-radius: 1rem;
+    padding: 0.75rem;
+    margin: 0.75rem;
+    position: inherit;
+    z-index: 1;
+    color: #f8fcff;
+}
+
+.codingGrid > div:nth-of-type(n+1) li div {
+    display: flex;
+    justify-content: center;
+
+}
+
+.codingGrid div:nth-of-type(n+1) li div a {
+    margin-left: 0.5rem;
+    color: #ebd676;
+}
+
+.codingGrid div:nth-of-type(2) li div {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.codingGrid .projectLink {
+    color: #66C0E2;
+}
+
+.codingGrid .projectLink:hover {
+    color: #d5b733
+}
+
 .researchGrid > div:nth-of-type(2) > div:first-of-type {
 
     border-right: $dashedLine1;
     border-left: $dashedLine1;
     z-index: 2;
+
 }
 
 .researchGrid > div:nth-of-type(2) > div:last-of-type {
@@ -141,9 +181,20 @@ $dashedLine2 : 0.75rem dashed #33bad5;
     z-index: 1;
 }
 
-.researchGrid li {
+.universalGrid li {
     padding: 0.5rem 0;
 }
+
+.researchGrid h1 {
+    color: #FAFAFA;
+    text-shadow: 0.15rem 0.15rem #33d59f;
+}
+
+.codingGrid h1 {
+    color: #FAFAFA;
+    text-shadow: 0.15rem 0.15rem #d5b733;
+}
+
 
 .researchGrid span {
     display: block;
@@ -190,27 +241,27 @@ $dashedLine2 : 0.75rem dashed #33bad5;
         animation: svg-spin infinite 30s linear;
     }
 
-    .researchGrid {
+    .universalGrid {
         grid-template-columns: 1fr 1fr 8rem;
         column-gap: 6rem;
         margin: 4rem;
     }
 
-    .researchGrid > div:first-of-type {
+    .universalGrid > div:first-of-type {
         writing-mode: vertical-rl;
         grid-column-start: 3;
         grid-row: 1;
     }
 
-    .researchGrid > div:nth-of-type(2n) {
+    .universalGrid > div:nth-of-type(2n) {
         grid-column-start: 2;
     }
 
-    .researchGrid > div:nth-of-type(2) {
+    .universalGrid > div:nth-of-type(2) {
         grid-row: 1;
     }
 
-    .researchGrid > div:nth-of-type(3) {
+    .universalGrid > div:nth-of-type(3) {
         grid-column-start: 1;
         grid-row: 1 /3;
     }

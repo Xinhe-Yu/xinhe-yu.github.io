@@ -1,8 +1,8 @@
 import FullScreenSection from "./layout/FullScreenSection";
 import { Heading, HStack } from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen, faStarHalfStroke, faStar } from "@fortawesome/free-solid-svg-icons";
-import { faStar as farStarRegular } from "@fortawesome/free-regular-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faBookOpen, faStarHalfStroke, faStar } from "@fortawesome/free-solid-svg-icons";
+// import { faStar as farStarRegular } from "@fortawesome/free-regular-svg-icons";
 import bgImg from "../assets/img/layered-peaks-haikei.svg"
 const LanguageSection = () => {
   return (
