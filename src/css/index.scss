@@ -195,6 +195,14 @@ $dashedLine2 : 0.75rem dashed #33bad5;
     text-shadow: 0.15rem 0.15rem #d5b733;
 }
 
+.languageGrid h1 {
+    color: #FAFAFA;
+    text-shadow: 0.15rem 0.15rem #9f33d5;
+}
+
+.languageGrid h2 {
+    margin: 1rem;
+}
 
 .researchGrid span {
     display: block;
@@ -220,6 +228,43 @@ $dashedLine2 : 0.75rem dashed #33bad5;
     border-right: 0.25rem solid #69d533;
     box-shadow: 0.25rem 0.25rem rgba(0, 0, 0, 0), -0.25rem -0.25rem #9f33d5;
     transition: 0.05s;
+}
+
+.languageGrid div:nth-of-type(n+2) {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.languageGrid > div:nth-of-type(n+2) {
+    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.1), 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 23, 52, 0.2);
+    font-family: "Ubuntu";
+    font-size: 1rem;
+    font-weight: 100;
+    border-radius: 1rem;
+    padding: 0.75rem;
+    margin: 0.75rem;
+    position: inherit;
+    z-index: 1;
+    color: #f8fcff;
+}
+
+.languageGrid a {
+    color: #aed581;
+    font-weight: 500;
+}
+
+.languageGrid tr > td:first-of-type {
+    color: #aed581;
+}
+
+.languageGrid a:hover {
+    color: #e0b8f4;
+    font-weight: 800;
 }
 
 @media screen and (min-width:992px) {
