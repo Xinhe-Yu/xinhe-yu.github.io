@@ -1,3 +1,10 @@
-The site is temporarily down for maintenance. I am in the process of rewriting the site in react.js.
+# Xinhe's Personal Website
 
-Please have a look at the [source code](https://github.com/Xinhe-Yu/xinhe-yu.github.io) if you are interested 🐱
+Welcome to the repository for my personal website, a project built using React. This site showcases my portfolio, skills, and projects. Feel free to explore the code, or visit the live website [here](https://xinhe.de/).
+
+### Technologies Used
+
+- **React.js**: For building the user interface.
+- **CSS3 and SCSS**: For styling.
+- **Charka UI**: For responsive design and styled components.
+- **FontAwesome**: For icons.

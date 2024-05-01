@@ -10,7 +10,7 @@ const intro = [
   {
     id: "coding",
     icon: faCode,
-    description: "Développeuse Front-end",
+    description: "Développeuse web",
   },
   {
     id: "research",
