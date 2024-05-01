@@ -56,18 +56,21 @@ const courses = [
     org: "Université de Michigan",
     name: "Python for Everybody",
     url: "https://coursera.org/verify/specialization/AWJK4MY6L8EW",
+    type: "Coursera Certificat",
   },
   {
     year: "2021",
     org: "Google",
     name: "Google IT Automation with Python",
     url: "https://coursera.org/verify/professional-cert/CX9RKB3MKAKS",
+    type: "Coursera Certificat",
   },
   {
     year: "2023",
     org: "Meta",
     name: "Meta Front-End Developer",
     url: "https://coursera.org/verify/professional-cert/RM6H7MYPMG82",
+    type: "Coursera Certificat",
   },
 ]
 
@@ -106,7 +109,7 @@ const CodingSection = () => {
         <div>
           <p>· {item.org}</p>
           <a href={item.url}>
-            <FontAwesomeIcon icon={faCertificate} /> Certificat</a>
+            <FontAwesomeIcon icon={faCertificate} /> {item.type}</a>
         </div>
 
       </li>
@@ -136,7 +139,7 @@ const CodingSection = () => {
           <Heading as="h2" size="md">Compétences</Heading>
           <ul>{SkillListItems}</ul>
           <div style={{ marginBottom: "1rem" }}></div>
-          <Heading as="h2" size="md">Cours sur Coursera</Heading>
+          <Heading as="h2" size="md">Formations</Heading>
           <ul>{CoursesListItems}</ul>
         </div>
       </Box>

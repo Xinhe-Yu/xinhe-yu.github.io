@@ -60,7 +60,7 @@ const LanguageSection = () => {
   const TranslateItems = projects.map((item => {
     return (
       <li key={item.title}>
-        <span>{item.title} </span> <FontAwesomeIcon icon={faArrowRight} />{" "}<a href={item.url}>{item.translatedTitle}</a>
+        <i>{item.title} </i> <FontAwesomeIcon icon={faArrowRight} />{" "}<a href={item.url}>{item.translatedTitle}</a>
         <p>Auteur : {item.author} ({item.date})</p>
       </li>
     )
