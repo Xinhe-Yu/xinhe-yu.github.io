@@ -57,7 +57,7 @@ const LandingSection = () => {
       alignItems="center"
       backgroundImage={bgImg}
     >
-      <Box className="landingGrid"
+      <Box className="yellowGrid"
         justifyContent="start"
         alignItems="center"
         fontSize="lg"

@@ -61,7 +61,7 @@ const ResearchSection = () => {
       <Box
         alignItems="center"
         fontSize="md"
-        className="universalGrid researchGrid"
+        className="universalGrid pinkGrid"
       >
         <div>
           <Heading as="h1" size="2xl">{heading[0]}</Heading>

@@ -7,6 +7,7 @@ import LandingSection from './components/LandingSection';
 import ResearchSection from './components/ResearchSection';
 import LanguageSection from './components/LanguageSection';
 import CodingSection from './components/CodingSection';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <ResearchSection />
         <LanguageSection />
 
+        <Footer />
       </main>
     </ChakraProvider>
   );

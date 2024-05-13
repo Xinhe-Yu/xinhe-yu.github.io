@@ -75,7 +75,7 @@ const LanguageSection = () => {
       <Box
         alignItems="center"
         fontSize="md"
-        className="universalGrid languageGrid"
+        className="universalGrid greenGrid"
       >
         <div>
           <Heading as="h1" size="2xl">{heading[0]}</Heading>

@@ -11,19 +11,19 @@ const projects = [
     name: "Xinhe's Personal Site",
     tech: [faReact, faSass],
     url: "https://xinhe.de/",
-    describe: "C'est le site que vous explorez actuellement !",
+    describe: "C'est le site que vous explorez actuellement ! Conçu avec soin en utilisant <u>React</u> pour une interface utilisateur dynamique et interactive, ce site bénéficie également de <u>Chakra UI</u>, qui facilite la mise en place d'un design responsive et accessible.",
   },
   {
     name: "Rui's Personal Site",
     url: "https://rui-yuan91.github.io/",
     tech: [faHtml5, faCss3, faJs, faBootstrap],
-    describe: "Un site personnel au style académique, doté d'un design responsive et de fonctionnalités JavaScript conçues pour faciliter la consultation et la citation des travaux scientifiques de son propriétaire.",
+    describe: "Un site personnel au style académique, doté d'un design responsive et de fonctionnalités <u>JavaScript</u> conçues pour faciliter la consultation et la citation des travaux scientifiques de son propriétaire.",
   },
   {
     name: "ALCN Databse",
     url: "https://xinhe-yu.github.io/ALCN/",
     tech: [faHtml5, faCss3, faJs, faBootstrap, faPython],
-    describe: "Le site est une base de données dédiée à la traduction des noms antiques. Construit principalement avec Bootstrap et JavaScript, la gestion des données est assurée par JSON, avec des scripts Python utilisés pour le traitement et la maintenance des données.",
+    describe: "Le site est une base de données dédiée à la traduction des noms antiques. Construit principalement avec <u>Bootstrap</u> et <u>JavaScript</u>, la gestion des données est assurée par <u>JSON</u>, avec des scripts <u>Python</u> utilisés pour le traitement et la maintenance des données.",
   },
 ]
 
@@ -89,7 +89,7 @@ const CodingSection = () => {
       <li key={index}>
         <a href={item.url} className="projectLink">{item.name}</a>
         <IconList icons={item.tech} />
-        <div style={{ color: "#E0E0E0" }}>{item.describe}</div>
+        <div style={{ color: "#E0E0E0" }}><p dangerouslySetInnerHTML={{ __html: item.describe }} /></div>
       </li>
     )
   });
@@ -125,7 +125,7 @@ const CodingSection = () => {
       <Box
         alignItems="center"
         fontSize="md"
-        className="universalGrid codingGrid"
+        className="universalGrid blueGrid"
       >
         <div>
           <Heading as="h1" size="2xl">{heading[0]}</Heading>
