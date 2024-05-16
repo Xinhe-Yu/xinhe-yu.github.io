@@ -34,19 +34,19 @@ const skills = [
   },
   {
     type: "Frameworks et bibliothèques",
-    content: "React, Bootstrap",
+    content: "React, Bootstrap, tailwind CSS",
   },
   {
     type: "Outils de développement",
-    content: "Git, npm",
+    content: "Git, npm, Docker, Jest",
   },
   {
     type: "Base de données",
     content: "SQLite",
   },
   {
-    type: "Systèmes d'exploitation",
-    content: "Linux",
+    type: "Les autres",
+    content: "Linux/Script Shell, LaTeX, Figma",
   },
 
 ]
@@ -96,8 +96,8 @@ const CodingSection = () => {
   const SkillListItems = skills.map((item, index) => {
     return (
       <li key={index}>
-        <span style={{ color: "#66C0E2" }}>{item.type}</span> {" "}
-        <span style={{ fontWeight: "100" }}>{item.content}</span>
+        <p style={{ color: "#66C0E2" }}>{item.type}</p> {" "}
+        <p style={{ fontWeight: "100" }}>{item.content}</p>
       </li>
     )
   })
