@@ -20,7 +20,7 @@ const projects = [
     describe: "Un site personnel au style académique, doté d'un design responsive et de fonctionnalités <u>JavaScript</u> conçues pour faciliter la consultation et la citation des travaux scientifiques de son propriétaire.",
   },
   {
-    name: "ALCN Databse",
+    name: "ALCN Database",
     url: "https://xinhe-yu.github.io/ALCN/",
     tech: [faHtml5, faCss3, faJs, faBootstrap, faPython],
     describe: "Le site est une base de données dédiée à la traduction des noms antiques. Construit principalement avec <u>Bootstrap</u> et <u>JavaScript</u>, la gestion des données est assurée par <u>JSON</u>, avec des scripts <u>Python</u> utilisés pour le traitement et la maintenance des données.",
