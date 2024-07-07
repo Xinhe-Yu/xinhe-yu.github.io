@@ -30,19 +30,19 @@ const projects = [
 const skills = [
   {
     type: "Langages de programmation",
-    content: "JavaScript\u00A0ES6/HTML5/CSS3, python",
+    content: "JavaScript\u00A0ES6/HTML5/CSS3, python, ruby",
   },
   {
     type: "Frameworks et bibliothèques",
-    content: "React, Bootstrap, tailwind CSS",
+    content: "React, Bootstrap, tailwind CSS, Rails",
   },
   {
     type: "Outils de développement",
-    content: "Git, npm, Docker, Jest",
+    content: "Git, npm, Docker, Jest, RSpec",
   },
   {
     type: "Base de données",
-    content: "SQLite",
+    content: "SQLite, PostgreSQL",
   },
   {
     type: "Les autres",
