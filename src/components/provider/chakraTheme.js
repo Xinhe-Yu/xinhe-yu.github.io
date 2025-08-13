@@ -3,8 +3,8 @@ import { extendTheme } from '@chakra-ui/react'
 
 const chakraTheme = extendTheme({
   fonts: {
-    heading: `'Nunito sans', sans-serif`,
-    body: `'Ubuntu', sans-serif`,
+    heading: `'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`,
+    body: `'Inter', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`,
   },
 })
 

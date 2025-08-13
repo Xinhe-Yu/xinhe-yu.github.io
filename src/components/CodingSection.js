@@ -1,12 +1,18 @@
 import FullScreenSection from "./layout/FullScreenSection";
 import { Box, Heading } from "@chakra-ui/react";
 import { faCertificate } from "@fortawesome/free-solid-svg-icons";
-import { faReact, faBootstrap, faJs, faPython, faCss3, faHtml5, faSass } from "@fortawesome/free-brands-svg-icons";
+import { faReact, faBootstrap, faJs, faPython, faCss3, faHtml5, faSass, faDocker } from "@fortawesome/free-brands-svg-icons";
 import bgImg from "../assets/img/stacked-steps-haikei.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const heading = ["compétence", "informatique"]
 const projects = [
+  {
+    name: "Ancient Lexicon CN",
+    url: "https://alcn.xinhe.de/",
+    tech: [faReact, faPython, faDocker],
+    describe: "Le site est une plateforme complète de dictionnaire pour la terminologie gréco-romaine avec des traductions collaboratives, proposant une recherche en texte intégral, des systèmes de discussion, et un support multilingue utilisant <u>FastAPI</u>, <u>PostgreSQL</u>, <u>Next.js</u>, et un déploiement <u>Docker</u>.",
+  },
   {
     name: "Xinhe's Personal Site",
     tech: [faReact, faSass],
@@ -19,30 +25,24 @@ const projects = [
     tech: [faHtml5, faCss3, faJs, faBootstrap],
     describe: "Un site personnel au style académique, doté d'un design responsive et de fonctionnalités <u>JavaScript</u> conçues pour faciliter la consultation et la citation des travaux scientifiques de son propriétaire.",
   },
-  {
-    name: "ALCN Database",
-    url: "https://xinhe-yu.github.io/ALCN/",
-    tech: [faHtml5, faCss3, faJs, faBootstrap, faPython],
-    describe: "Le site est une base de données dédiée à la traduction des noms antiques. Construit principalement avec <u>Bootstrap</u> et <u>JavaScript</u>, la gestion des données est assurée par <u>JSON</u>, avec des scripts <u>Python</u> utilisés pour le traitement et la maintenance des données.",
-  },
 ]
 
 const skills = [
   {
     type: "Langages de programmation",
-    content: "JavaScript\u00A0ES6/HTML5/CSS3, python, ruby",
+    content: "JavaScript/TypeScript, Go, Python (FastAPI), Ruby (Rails), Java (Spring Boot)",
   },
   {
     type: "Frameworks et bibliothèques",
-    content: "React, Bootstrap, tailwind CSS, Rails",
+    content: "React, Angular, Svelte, tailwind CSS",
   },
   {
     type: "Outils de développement",
-    content: "Git, npm, Docker, Jest, RSpec",
+    content: "Git, Docker, CI/CD (GitHub Actions), automated testing, Redis",
   },
   {
     type: "Base de données",
-    content: "SQLite, PostgreSQL",
+    content: "PostgreSQL, Weaviate, SQLite",
   },
   {
     type: "Les autres",
@@ -51,6 +51,20 @@ const skills = [
 
 ]
 const courses = [
+  {
+    year: "2024-2025",
+    org: "OpenClassrooms",
+    name: "Full‑Stack Developer‑Java & Angular",
+    url: "https://www.francecompetences.fr/recherche/rncp/36912/",
+    type: "RNCP Niveau 7",
+  },
+  {
+    year: "2024",
+    org: "Le Wagon",
+    name: "Web Development Bootcamp",
+    url: "https://www.francecompetences.fr/recherche/rncp/39261/",
+    type: "RNCP Niveau 6",
+  },
   {
     year: "2020",
     org: "Université de Michigan",
