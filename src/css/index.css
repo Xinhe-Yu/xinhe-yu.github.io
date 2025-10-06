@@ -9,6 +9,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Ubuntu", "Nunito Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 ul {
@@ -266,7 +267,7 @@ u {
     padding-right: 4rem;
   }
   .yellowGrid {
-    grid-template-columns: 1fr 8rem 1fr;
+    grid-template-columns: 1fr 2rem 2fr;
   }
   .yellowGrid > div:last-child {
     grid-column-start: 3;

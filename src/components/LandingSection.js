@@ -1,7 +1,7 @@
 import FullScreenSection from "./layout/FullScreenSection";
-import { Box, Heading, Image, VStack } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import profile from '../assets/img/profile.jpg'
-import { faGraduationCap, faLanguage, faCode, faMagnifyingGlass, faCheckToSlot } from "@fortawesome/free-solid-svg-icons";
+import { faGraduationCap, faLanguage, faCode, faMagnifyingGlass, faCheckToSlot, faAnglesDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import bgImg from '../assets/img/polygon-scatter-haikei.svg'
 const greeting = "Salut, c'est Xinhe !"
@@ -51,13 +51,43 @@ const LandingSection = () => {
 
   const introListItems = intro.map(item => {
     return (
-      <a
-        href={"/#" + item.id}
+      <Box
+        as="a"
+        href={`/#${item.id}`}
         key={item.id}
-        onClick={() => handleClick(item.id)}
-        style={{ padding: "", }}>
-        <FontAwesomeIcon icon={item.icon} />{" "}{item.description}
-      </a >
+        onClick={(event) => {
+          event.preventDefault();
+          handleClick(item.id);
+        }}
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        gap={4}
+        px={6}
+        py={4}
+        border="3px solid #0f0f0f"
+        borderRadius="0"
+        textDecoration="none"
+        backgroundColor="#F7F5FF"
+        color="#0f0f0f"
+        fontWeight="800"
+        letterSpacing="0.05em"
+        textTransform="uppercase"
+        boxShadow="6px 6px 0 #0f0f0f"
+        transition="transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease"
+        aria-label={`Aller à la section ${item.description}`}
+        _hover={{
+          transform: "translate(-4px, -4px)",
+          boxShadow: "10px 10px 0 #0f0f0f",
+          backgroundColor: "#FFF4B8"
+        }}
+      >
+        <Flex alignItems="center" gap={4}>
+          <FontAwesomeIcon icon={item.icon} size="lg" />
+          <Text>{item.description}</Text>
+        </Flex>
+        <FontAwesomeIcon icon={faAnglesDown} />
+      </Box>
     )
   })
   const currentListItems = current.map(item => {
@@ -94,12 +124,16 @@ const LandingSection = () => {
           </svg>
           <Image src={profile} />
         </div>
-        <VStack align="strech">
+        <VStack align="stretch" spacing={5}>
           <Heading as="h1">{greeting}</Heading>
           <Heading as="h2" size="md" px={8}>{bio}</Heading>
-          {introListItems}
+          <VStack align="stretch" spacing={4}>
+            {introListItems}
+          </VStack>
           <hr style={{ borderTop: "2px solid #151515" }}></hr>
-          {currentListItems}
+          <VStack align="stretch" spacing={2}>
+            {currentListItems}
+          </VStack>
         </VStack>
       </Box>
     </FullScreenSection>
