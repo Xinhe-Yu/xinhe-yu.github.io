@@ -64,7 +64,7 @@ const Navbar = () => {
         display="flex"
         alignItems="center"
         justifyContent="center"
-        padding={2}
+        padding={{ base: '6px', md: 2 }}
         aria-label={item.linkTo}
         target={item.target}
         rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
@@ -84,20 +84,23 @@ const Navbar = () => {
       transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b"
       zIndex={255}
-      width="100vw"
+      width="100%"
+      overflowX="hidden"
     >
-      <Box color="#FAFAFA" maxWidth="1280px" margin="0 auto" fontSize='xl'>
+      <Box color="#FAFAFA" maxWidth="1280px" margin="0 auto" fontSize='xl' width="100%">
         <HStack
-          px={12}
-          py={4}
+          px={{ base: 4, md: 12 }}
+          py={{ base: 3, md: 4 }}
           justifyContent="space-between"
           alignItems="center"
+          spacing={{ base: 3, md: 6 }}
+          width="100%"
           id="navbar"
         >
           <nav>
-            <Heading as="h3" size='lg'>Xinhe YU</Heading>
+            <Heading as="h3" size='lg' noOfLines={1}>Xinhe YU</Heading>
           </nav>
-          <HStack as="nav" spacing={2} align="center">
+          <HStack as="nav" spacing={{ base: 2, md: 3 }} align="center">
             {contactListItems}
           </HStack>
         </HStack>

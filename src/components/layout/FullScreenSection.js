@@ -13,9 +13,17 @@ const FullScreenSection = ({ children, isDarkBackground, ...boxProps }) => {
       borderTop={boxProps.adddashedborder.top ? "12px dashed black" : null}
       marginTop="-0.5px" // avoid tiny white space between sections
       marginBottom="-0.5px"
+      width="100%"
       overflow="hidden"
     >
-      <VStack maxWidth="1280px" minHeight="100vh" {...newBoxProps}>
+      <VStack
+        maxWidth="1280px"
+        minHeight="100vh"
+        width="100%"
+        px={{ base: 4, md: 12 }}
+        boxSizing="border-box"
+        {...newBoxProps}
+      >
         {children}
       </VStack>
     </VStack>

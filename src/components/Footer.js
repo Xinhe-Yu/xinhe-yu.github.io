@@ -7,7 +7,7 @@ const Footer = () => {
       left={0}
       right={0}
       backgroundColor="#18181b"
-      width="100vw"
+      width="100%"
     >
       <Box
         color="#FAFAFA"
