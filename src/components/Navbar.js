@@ -1,54 +1,77 @@
 /* import { useState, useEffect, useRef } from 'react'; */
 import { Box, HStack, Heading } from '@chakra-ui/react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faFileImport } from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faLinkedin,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import cvPdf from "../assets/img/cv_Xinhe_Yu.pdf";
+
+const CvIcon = () => (
+  <Box
+    as="span"
+    display="flex"
+    alignItems="center"
+    justifyContent="center"
+    width="1.5rem"
+    height="1.5rem"
+    borderRadius="md"
+    fontWeight="bold"
+    fontSize="0.7rem"
+    backgroundColor="#E2E8F0"
+    color="#1A202C"
+    textTransform="uppercase"
+    lineHeight="1"
+  >
+    CV
+  </Box>
+);
 
 const contacts = [
   {
-    icon: faEnvelope,
+    icon: <FontAwesomeIcon icon={faEnvelope} size="lg" />,
     linkTo: "email",
     url: "mailto: xinhe.yu.dsa@gmail.com",
   },
   {
-    icon: faGithub,
+    icon: <CvIcon />,
+    linkTo: "CV",
+    url: cvPdf,
+    target: "_blank",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faGithub} size="lg" />,
     linkTo: "Github",
     url: "https://github.com/Xinhe-Yu",
   },
   {
-    icon: faLinkedin,
+    icon: <FontAwesomeIcon icon={faLinkedin} size="lg" />,
     linkTo: "Linkedin",
     url: "https://www.linkedin.com/in/xinhe-yu-21750418a",
   },
   {
-    icon: faInstagram,
+    icon: <FontAwesomeIcon icon={faInstagram} size="lg" />,
     linkTo: "Instagram",
     url: "https://www.instagram.com/xiiiiiinhe",
-  },
-  {
-    icon: faFileImport,
-    linkTo: "CV",
-    url: cvPdf,
-    target: "_blank",
   }
 ]
 
 const Navbar = () => {
   const contactListItems = contacts.map(item => {
-    return <a
-      href={item.url}
-      key={item.linkTo}
-      style={{ padding: 8 }}
-      target={item.target}
-      rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
-    >
-      <FontAwesomeIcon icon={item.icon} size="lg" />
-    </a>
+    return (
+      <Box
+        as="a"
+        href={item.url}
+        key={item.linkTo}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        padding={2}
+        aria-label={item.linkTo}
+        target={item.target}
+        rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+      >
+        {item.icon}
+      </Box>
+    )
   })
   return (
     <Box
@@ -74,9 +97,9 @@ const Navbar = () => {
           <nav>
             <Heading as="h3" size='lg'>Xinhe YU</Heading>
           </nav>
-          <nav>
+          <HStack as="nav" spacing={2} align="center">
             {contactListItems}
-          </nav>
+          </HStack>
         </HStack>
       </Box>
     </Box >
