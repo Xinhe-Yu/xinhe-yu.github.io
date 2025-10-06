@@ -5,7 +5,6 @@ Welcome to the repository for my personal website, a project built using React. 
 ### Technologies Used
 
 - **React.js**: For building the user interface.
-- **CSS3 and SCSS**: For styling.
 - **Charka UI**: For responsive design and styled components.
 - **FontAwesome**: For icons.
 
