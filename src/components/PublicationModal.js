@@ -60,35 +60,53 @@ const translation = [
     info2: "Museum Sinicum",
     info3: " III, W. Zhang (éd.), Shanghaï : Presse de l’Université Fudan, p. 284-303",
   },
+  {
+    type: "book",
+    year: "forthcoming",
+    title: "L’Autel de Pergame",
+    info1: " de François Queyrel, de français en chinois, Shanghaï : Commercial Press",
+  }
 ]
-const pubNumber = publication.length;
-const transNumber = translation.length;
-function PublicationModal() {
-  const PubListItems = publication.map((item, index) => {
-    let punctuation = index + 1 === pubNumber ? "." : ";";
-    let formattedPubItem = (
-      <span>({item.year}) "{item.title}"{item.info1}<i>{item.info2}</i>{item.info3}{punctuation}</span>
+
+const renderEntry = (item, isLast) => {
+  const punctuation = isLast ? '.' : ';';
+  const info1 = item.info1 ?? '';
+  const info2 = item.info2 ? <i>{item.info2}</i> : null;
+  const info3 = item.info3 ?? '';
+
+  if (item.type === "book") {
+    return (
+      <span>
+        ({item.year}) <i>{item.title}</i>
+        {info1 && ` ${info1}`}
+        {info2}
+        {info3}
+        {punctuation}
+      </span>
     );
-    if (item.type === "book") {
-      formattedPubItem = (
-        <span>({item.year}) <i>{item.title}</i> {item.info1}{punctuation}</span>
-      )
-    }
-    return (
-      <li key={index}>
-        {formattedPubItem}
-      </li>
-    )
-  })
-  const TranListItems = translation.map((item, index) => {
-    let punctuation;
-    index + 1 === transNumber ? punctuation = "." : punctuation = ";";
-    return (
-      <li key={index}>
-        ({item.year}) "{item.title}"{item.info1}<i>{item.info2}</i>{item.info3}{punctuation}
-      </li>
-    )
-  })
+  }
+
+  return (
+    <span>
+      ({item.year}) “{item.title}”
+      {info1}
+      {info2}
+      {info3}
+      {punctuation}
+    </span>
+  );
+};
+
+const buildListItems = (items) =>
+  items.map((item, index) => (
+    <li key={`${item.title}-${item.year}-${index}`}>
+      {renderEntry(item, index === items.length - 1)}
+    </li>
+  ));
+
+function PublicationModal() {
+  const PubListItems = buildListItems(publication);
+  const TranListItems = buildListItems(translation);
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <>
