@@ -66,24 +66,10 @@ const courses = [
     type: "RNCP Niveau 6",
   },
   {
-    year: "2020",
-    org: "Université de Michigan",
-    name: "Python for Everybody",
-    url: "https://coursera.org/verify/specialization/AWJK4MY6L8EW",
-    type: "Coursera Certificat",
-  },
-  {
-    year: "2021",
-    org: "Google",
-    name: "Google IT Automation with Python",
-    url: "https://coursera.org/verify/professional-cert/CX9RKB3MKAKS",
-    type: "Coursera Certificat",
-  },
-  {
-    year: "2023",
-    org: "Meta",
-    name: "Meta Front-End Developer",
-    url: "https://coursera.org/verify/professional-cert/RM6H7MYPMG82",
+    year: "2025",
+    org: "IBM",
+    name: "IBM Data Science",
+    url: "https://www.coursera.org/account/accomplishments/specialization/FFRS1SKQK7P6",
     type: "Coursera Certificat",
   },
 ]
