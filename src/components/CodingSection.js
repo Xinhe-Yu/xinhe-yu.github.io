@@ -2,7 +2,7 @@ import FullScreenSection from "./layout/FullScreenSection";
 import { Box, Heading } from "@chakra-ui/react";
 import { faCertificate } from "@fortawesome/free-solid-svg-icons";
 import { faReact, faBootstrap, faJs, faPython, faCss3, faHtml5, faSass, faDocker } from "@fortawesome/free-brands-svg-icons";
-import bgImg from "../assets/img/stacked-steps-haikei.svg"
+import bgImg from "../assets/img/stacked-waves-haikei.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const heading = ["compétence", "informatique"]
