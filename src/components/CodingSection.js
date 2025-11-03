@@ -34,7 +34,7 @@ const skills = [
   },
   {
     type: "Frameworks et bibliothèques",
-    content: "React, Angular, Svelte, tailwind CSS",
+    content: "React, Angular, Svelte, tailwind CSS, Pandas/Matplotlib/Scikit‑learn",
   },
   {
     type: "Outils de développement",
@@ -42,7 +42,7 @@ const skills = [
   },
   {
     type: "Base de données",
-    content: "PostgreSQL, Weaviate, SQLite",
+    content: "PostgreSQL/MySQL/SQLite, Weaviate",
   },
   {
     type: "Les autres",
