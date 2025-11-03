@@ -2,7 +2,7 @@ import FullScreenSection from "./layout/FullScreenSection";
 import { Box, Heading } from "@chakra-ui/react";
 import { faCertificate } from "@fortawesome/free-solid-svg-icons";
 import { faReact, faBootstrap, faJs, faPython, faCss3, faHtml5, faSass, faDocker } from "@fortawesome/free-brands-svg-icons";
-import bgImg from "../assets/img/stacked-steps-haikei.svg"
+import bgImg from "../assets/img/stacked-waves-haikei.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const heading = ["compétence", "informatique"]
@@ -34,7 +34,7 @@ const skills = [
   },
   {
     type: "Frameworks et bibliothèques",
-    content: "React, Angular, Svelte, tailwind CSS",
+    content: "React, Angular, Svelte, tailwind CSS, Pandas/Matplotlib/Scikit‑learn",
   },
   {
     type: "Outils de développement",
@@ -42,7 +42,7 @@ const skills = [
   },
   {
     type: "Base de données",
-    content: "PostgreSQL, Weaviate, SQLite",
+    content: "PostgreSQL/MySQL/SQLite, Weaviate",
   },
   {
     type: "Les autres",
@@ -66,24 +66,10 @@ const courses = [
     type: "RNCP Niveau 6",
   },
   {
-    year: "2020",
-    org: "Université de Michigan",
-    name: "Python for Everybody",
-    url: "https://coursera.org/verify/specialization/AWJK4MY6L8EW",
-    type: "Coursera Certificat",
-  },
-  {
-    year: "2021",
-    org: "Google",
-    name: "Google IT Automation with Python",
-    url: "https://coursera.org/verify/professional-cert/CX9RKB3MKAKS",
-    type: "Coursera Certificat",
-  },
-  {
-    year: "2023",
-    org: "Meta",
-    name: "Meta Front-End Developer",
-    url: "https://coursera.org/verify/professional-cert/RM6H7MYPMG82",
+    year: "2025",
+    org: "IBM",
+    name: "IBM Data Science",
+    url: "https://www.coursera.org/account/accomplishments/specialization/FFRS1SKQK7P6",
     type: "Coursera Certificat",
   },
 ]
